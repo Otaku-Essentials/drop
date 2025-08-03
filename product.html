@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,19 +13,26 @@
     <div class="price-section">
       <span class="badge" id="prodDiscount"></span>
       <div id="priceOptions"></div>
-    </div>
+    </div><form id="orderForm">
+  <input type="text" name="customerName" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Email" required />
+  <input type="tel" name="phone" placeholder="Phone" required />
 
-    <form id="orderForm">
-      <input type="text" name="customerName" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <input type="tel" name="phone" placeholder="Phone" required />
-      <textarea name="address" placeholder="Address" required></textarea>
-      <input type="hidden" name="product" id="fieldProdName" />
-      <input type="hidden" name="price" id="fieldPrice" />
-      <button type="submit">Place Order</button>
-    </form>
+  <!-- Split address fields like Meesho -->
+  <input type="text" name="address_line1" placeholder="House No. / Flat No." required />
+  <input type="text" name="address_line2" placeholder="Area / Street / Sector" required />
+  <input type="text" name="landmark" placeholder="Landmark (Optional)" />
+  <input type="text" name="city" placeholder="City" required />
+  <input type="text" name="state" placeholder="State" required />
+  <input type="text" name="pincode" placeholder="Pincode" required />
+
+  <input type="hidden" name="product" id="fieldProdName" />
+  <input type="hidden" name="price" id="fieldPrice" />
+  <button type="submit">Place Order</button>
+</form>
+
   </div>
   <script src="products.js"></script>
   <script src="product.js"></script>
 </body>
-</html>
+    </html>
